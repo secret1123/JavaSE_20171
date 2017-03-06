@@ -1,3 +1,5 @@
+import com.sun.tools.doclets.formats.html.SourceToHTMLConverter;
+
 /**
  * Created by anlu on 2017/3/6.
  */
@@ -11,11 +13,16 @@ public class Hello {
         int z = x + y;
         System.out.println(z);
 
-        if (x + y > 400) {
+        if (x + y < 400) {
             System.out.println("今天星期一");
+            }
+            else {
+            System.out.println("今天星期二");
+        }
+
+
         }
     }
-}
 
 
 
