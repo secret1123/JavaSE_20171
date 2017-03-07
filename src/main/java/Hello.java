@@ -19,9 +19,7 @@ public class Hello {
             else {
             System.out.println("今天星期二");
         }
-
-
-        }
+      }
     }
 
 
