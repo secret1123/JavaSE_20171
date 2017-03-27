@@ -2,7 +2,7 @@ package java1702.javase.collection;
 
 /**
  * Created by AnLu on
- * 2017/3/27 15:34.
+ * 2017/3/27 15:34
  * JavaSE_20171
  */
 public class ArrayTest {
