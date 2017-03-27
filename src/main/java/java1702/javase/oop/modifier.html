@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .g {
+            background: green;
+        }
+        .r {
+            background: darkred;
+        }
+    </style>
+</head>
+<body>
+<table border="1">
+    <caption>(public)类成员的访问限定修饰符</caption>
+    <tr>
+        <th>-</th>
+        <th>private</th>
+        <th>default</th>
+        <th>protected</th>
+        <th>public</th>
+    </tr>
+    <tr>
+        <td>同一个类内部</td>
+        <td class="g"></td>
+        <td class="g"></td>
+        <td class="g"></td>
+        <td class="g"></td>
+    </tr>
+    <tr>
+        <td>同一个包内部</td>
+        <td class="r"></td>
+        <td class="g"></td>
+        <td class="g"></td>
+        <td class="g"></td>
+    </tr>
+    <tr>
+        <td>外部类（子类的实例对象）</td>
+        <td class="r"></td>
+        <td class="r"></td>
+        <td class="g"></td>
+        <td class="g"></td>
+    </tr>
+    <tr>
+        <td>外包</td>
+        <td class="r"></td>
+        <td class="r"></td>
+        <td class="r"></td>
+        <td class="g"></td>
+    </tr>
+</table>
+</body>
+</html>

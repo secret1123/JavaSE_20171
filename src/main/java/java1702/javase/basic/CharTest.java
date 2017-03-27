@@ -1,3 +1,5 @@
+package java1702.javase.basic;
+
 /**
  * Created by anlu on 2017/3/7.
  */

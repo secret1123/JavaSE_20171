@@ -1,7 +1,9 @@
+package java1702.javase.basic;
+
 /**
- * Created by anlu on 2017/3/7.
+ * Created by an lu on 2017/3/7.
  */
-public class OneFlower {
+public class Flower {
     public static void main(String[] args) {
         System.out.println("像花儿一样");
 
