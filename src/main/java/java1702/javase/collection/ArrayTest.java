@@ -9,7 +9,7 @@ public class ArrayTest {
     public static void main(String[] args) {
         String[] strings = new String[10];
         System.out.println(strings[0]);
-        strings[0] = "test.";
+        strings[0] = "test...";
         System.out.println(strings[0]);
 
         boolean[] booleans = new boolean[100];
