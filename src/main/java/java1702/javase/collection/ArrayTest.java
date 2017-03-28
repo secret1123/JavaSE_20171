@@ -35,7 +35,7 @@ public class ArrayTest {
 
         String[] months = {"Jan","Feb","Mar","Apr","May"};
 
-        //itar + tab
+        //itar + tab   iterate 迭代 array 数组  对数组进行迭代循环赋值
         for (int i = 0; i < months.length; i++) {
             String month = months[i];
             System.out.println(month);
