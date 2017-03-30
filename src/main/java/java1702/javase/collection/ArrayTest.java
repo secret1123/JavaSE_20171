@@ -18,7 +18,7 @@ public class ArrayTest {
         int[] ints = {1,2,3,4,5,6,67,888};
         System.out.println(ints[6]);
 
-        double[] doubles= new double[10000];
+        double[] doubles= new double[10];
         for (int i = 0; i < doubles.length; i++) {
             doubles[i] = i + 1;
         }

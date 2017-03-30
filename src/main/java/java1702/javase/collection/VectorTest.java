@@ -28,11 +28,31 @@ public class VectorTest {
         System.out.println(vector.size());
         System.out.println(vector.capacity());
 
-        Set<String> strings = new HashSet<>();
-        strings.add("a");
-        strings.add("aa");
-        strings.add("aaa");
-        strings.add("aaa");
-        System.out.println(strings.size());
+//        Set<String> strings = new HashSet<>();
+//        strings.add("a");
+//        strings.add("aa");
+//        strings.add("aaa");
+//        strings.add("aaa");
+//        System.out.println(strings.size());
+
+        Vector<Integer> integers = new Vector<>();
+        integers.add(1);
+        integers.add(10);
+        integers.add(100);
+        integers.add(1000);
+        System.out.println(integers.size());
+        System.out.println(integers.capacity());
+        for (Integer integer : integers) {
+            System.out.println(integer);
+        }
+        System.out.println(integers.set(3,30));
+        integers.setElementAt(20,2);
+        System.out.println(integers);
+        integers.remove(0);
+        System.out.println(integers);
+//        integers.removeAllElements();
+//        System.out.println(integers);
+        integers.clear();
+        System.out.println(integers);
     }
 }
