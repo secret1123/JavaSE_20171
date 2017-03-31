@@ -1,6 +1,5 @@
 package java1702.javase.exercise;
 
-import sun.security.util.Length;
 
 /**
  * Created by AnLu on
@@ -74,5 +73,5 @@ public class ArrayVector {
     public int capacity() {
         return capacity;
     }
-    
+
 }
