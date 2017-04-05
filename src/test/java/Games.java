@@ -9,13 +9,13 @@ public class Games {
 
     public static void main(String[] args) {
         String[][] strings= new String[10][10];
-        for (int i = 0; i < strings.length; i++) {
-            for (int j = 0; j < strings[i].length; j++) {
-                strings[i][j] =COLORS[(int)(Math.random()*4)];
-
-                System.out.print(strings[i][j]+"\t");
-            }
-            System.out.println();
+//        for (int i = 0; i < strings.length; i++) {
+//            for (int j = 0; j < strings[i].length; j++) {
+//                strings[i][j] =COLORS[(int)(Math.random()*4)];
+//
+//                System.out.print(strings[i][j]+"\t");
+//            }
+//            System.out.println();
         }
     }
-}
+//}

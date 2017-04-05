@@ -13,6 +13,7 @@ public class StringTest {
         String str = new String(chars);
         System.out.println(str.toUpperCase());
         System.out.println(str.toLowerCase());
+        System.out.println(Arrays.toString(str.toCharArray()));
 
         for (char c : str.toCharArray()) {
             System.out.print(c);
