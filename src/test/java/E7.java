@@ -10,14 +10,24 @@ import java.util.Scanner;
 public class E7 {
     public static void main(String[] args) {
 
-//        String str = new String();
         Scanner scanner = new Scanner(System.in);
         System.out.println("请输入： " );
         String s = scanner.nextLine();
-        System.out.println(s.toUpperCase());
-        System.out.println(s.toLowerCase());
-        System.out.println(s.charAt(s.length()-1));
-    }
 
+        char[] chars = s.toCharArray();
+        for (int i = 0; i < chars.length; i++) {
+            if (chars[i]>='A'&&chars[i]<='Z'){
+                chars[i]+=32;
+            }else {
+                chars[i]-=32;
+            }
+        }
+        System.out.println(chars);
 
+        char charMid = chars[0];
+        chars[0] = chars[chars.length-1];
+        chars[chars.length-1]=charMid;
+
+        System.out.println(chars);
     }
+}
