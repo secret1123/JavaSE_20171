@@ -7,6 +7,9 @@ package java1702.javase.oop;
  */
 public abstract class AbstractTest {
     private int i;
+    private double d;
+
+    public abstract void method(int i);
 
     public abstract void method();
 
@@ -35,6 +38,11 @@ class SubAbstractTest extends AbstractTest {
     }
 
     @Override
+    public void method(int i) {
+
+    }
+
+    @Override
     public void method() {
 
     }
@@ -43,4 +51,5 @@ class SubAbstractTest extends AbstractTest {
     void method2() {
 
     }
+
 }

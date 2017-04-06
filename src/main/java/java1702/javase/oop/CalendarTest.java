@@ -10,7 +10,7 @@ import java.util.GregorianCalendar;
  */
 public class CalendarTest {
 
-    static final String week[] = {"星期日", "星期一", "星期二", "星期三", "星期四", "星期五", "星期六"};
+    static final String WEEK[] = {"星期日", "星期一", "星期二", "星期三", "星期四", "星期五", "星期六"};
 
     public static void main(String[] args) {
         int i;
@@ -22,8 +22,8 @@ public class CalendarTest {
 //        calendar.set(year,month-1,1);
         int totalDays = Calendar.DAY_OF_MONTH;
         int startDay = Calendar.DAY_OF_WEEK - 1;
-        for (i = 0; i < week.length; i++) {
-            System.out.print(week[i] + "\t");
+        for (i = 0; i < WEEK.length; i++) {
+            System.out.print(WEEK[i] + "\t");
         }
             System.out.println();
 
