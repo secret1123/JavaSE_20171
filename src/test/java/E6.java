@@ -1,5 +1,6 @@
 import sun.security.util.Length;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 /**
@@ -13,27 +14,24 @@ public class E6 {
 
     public static void main(String[] args) {
 
-        int[][] ints = new int[4][4];
-        System.out.println("请输入16个数字：");
+        int[][] ints = new int[2][2];
         Scanner scanner = new Scanner(System.in);
-        for (int i = 0; i < 4; i++) {
-            for (int j = 0; j < 4; j++) {
-                int x = scanner.nextInt();
-                ints[i][j]=x;
-            }
-        }
-        System.out.println();
+        int sum = 0;
+        int mul = 1;
         for (int i = 0; i < ints.length; i++) {
             for (int j = 0; j < ints[i].length; j++) {
-//                ints[i][j] = (int) (Math.random() * 4);
-
-                System.out.print(ints[i][j] + "\t");
+                System.out.println("请输入整数：" );
+                ints[i][j] = scanner.nextInt();
+                if (i == j) {
+                    sum += ints[i][j];
+                }
+                if (i + j == ints.length - 1) {
+                    mul *= ints[i][j];
+                }
             }
-            System.out.println();
         }
-        int n = ints[0][0] * ints[1][1] * ints[2][2] * ints[3][3];
-        int m = ints[3][0] * ints[2][1] * ints[1][2] * ints[0][3];
-        System.out.println("主对角线乘积：" + n);
-        System.out.println("副对角线乘积：" + m);
+        System.out.println(Arrays.deepToString(ints));
+        System.out.println(sum);
+        System.out.println(mul);
     }
 }
