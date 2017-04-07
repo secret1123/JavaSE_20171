@@ -1,3 +1,5 @@
+import java1702.javase.collection.StringTest;
+
 import java.util.Scanner;
 
 /**
@@ -16,13 +18,16 @@ public class E7 {
 
         char[] chars = s.toCharArray();
         for (int i = 0; i < chars.length; i++) {
-            if (chars[i]>='A'&&chars[i]<='Z'){
-                chars[i]+=32;
-            }else {
-                chars[i]-=32;
+            char aChar = chars[i];
+            String s1 = aChar+"";Character.toString(aChar);
+            if (s1.toLowerCase().equals(s1)) {
+                s1 = s1.toUpperCase();
+                chars[i] = s1.toCharArray()[0];
+            }else if(s1.toUpperCase().equals(s1)){
+                s1 = s1.toLowerCase();
+                chars[i] = s1.toCharArray()[0];
             }
         }
-        System.out.println(chars);
 
         char charMid = chars[0];
         chars[0] = chars[chars.length-1];
@@ -31,3 +36,4 @@ public class E7 {
         System.out.println(chars);
     }
 }
+
