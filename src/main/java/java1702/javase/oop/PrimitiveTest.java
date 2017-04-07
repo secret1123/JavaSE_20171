@@ -7,7 +7,6 @@ package java1702.javase.oop;
  */
 public class PrimitiveTest {
 
-       private String s;
 //    private static void method(int i) {
 //        System.out.println("b:"+i);
 //        i++;
@@ -21,17 +20,29 @@ public class PrimitiveTest {
 //        System.out.println("d:"+i);
 //    }
 //
-    private static void method(PrimitiveTest primitiveTest) {
-        System.out.println("b:"+primitiveTest.s);
-        primitiveTest.s="hi";
-        System.out.println("c:"+primitiveTest.s);
+//    private static void method(String s) {
+//        System.out.println("b:"+s);
+//        s="hi";
+//        System.out.println("c:"+s);
+//    }
+//
+//    public static void main(String[] args) {
+//        String s = "hello";
+//        System.out.println("a:"+s);
+//        method(s);
+//        System.out.println("d:"+s);
+//    }
+
+    public static void method(boolean b) {
+        System.out.println("2:"+b);
+        b = true;
+        System.out.println("3:"+b);
     }
 
     public static void main(String[] args) {
-        PrimitiveTest primitiveTest=new PrimitiveTest();
-        primitiveTest.s = "hello";
-        System.out.println("a:"+primitiveTest.s);
-        method(primitiveTest);
-        System.out.println("d:"+primitiveTest.s);
+        boolean b =false;
+        System.out.println("1:"+b);
+        method(b);
+        System.out.println("4:"+b);
     }
 }
