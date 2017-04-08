@@ -35,7 +35,6 @@ public class ArrayVector {
         size++;
     }
 
-
     public String get(int index) {
         if (index >= size) {
             System.out.println("error");
