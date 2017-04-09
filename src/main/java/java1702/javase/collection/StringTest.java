@@ -25,7 +25,7 @@ public class StringTest {
         System.out.println("7->: "+s1.concat("get").concat("her").concat("!!!"));//字符串拼接
         System.out.println("8->: "+s.contains("o"));//是否包含某个字符
         System.out.println("9->: "+s.endsWith("e"));//是否是最后一个字符
-        System.out.println("10->: "+s1.equals("to"));//是否和指定字符串相等
+        System.out.println("10->: "+s1.equals("to"));//是否和指定字符串相等,区分大小写
         String s2 = "TWO";
         /*
           将此 String 与另一个 String 比较，不考虑大小写。如果两个字符串的长度相同，并且其中的相应字符都相等（忽略大小写），则认为这两个字符串是相等的。
@@ -51,8 +51,7 @@ public class StringTest {
         System.out.println("22->: "+Arrays.toString(s4.toCharArray()));//把字符串转成字符数组
         String s5 = "     hi     ";
         System.out.println("23->: "+s5.trim());//去掉前后空格
-//        String.valueOf();
-//        System.out.println(chars);
+        System.out.println(String.valueOf(new char[]{'t','e','s','t'}));
         StringBuffer s6 = new StringBuffer("hello");
         System.out.println(s6.reverse());//字符串缓冲区方法  倒转字符串
     }

@@ -16,7 +16,7 @@ public class StringBufferTest {
         StringBuffer stringBuffer1 = new StringBuffer(s);
         String s1 = stringBuffer1.toString();
 
-        //append 附加 前缀
+        //append 在后面追加  prepend 前缀，在前面添加
         //string pool 字符串池
         String s2 = "true";
         s2 += "123";
@@ -30,7 +30,7 @@ public class StringBufferTest {
         //reverse 颠倒，倒转
         System.out.println(stringBuffer.reverse());
 
-        stringBuffer.setCharAt(0,'a');//setCharAt 没有返回值，所以不能直接输入，要先赋值再输出
+        stringBuffer.reverse().setCharAt(0,'T');//setCharAt 没有返回值，所以不能直接输入，要先赋值再输出
         System.out.println(stringBuffer);
     }
     private static String reverse(String origin) {

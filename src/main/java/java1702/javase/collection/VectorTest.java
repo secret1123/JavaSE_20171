@@ -1,5 +1,6 @@
 package java1702.javase.collection;
 
+import java.util.Arrays;
 import java.util.HashSet;
 import java.util.Set;
 import java.util.Vector;
@@ -35,7 +36,7 @@ public class VectorTest {
 //        strings.add("aaa");
 //        System.out.println(strings.size());
 
-        Vector<Integer> integers = new Vector<>();
+        Vector<Integer> integers = new Vector<>(1000,100);
         integers.add(1);
         integers.add(10);
         integers.add(100);
@@ -47,12 +48,24 @@ public class VectorTest {
         }
         System.out.println(integers.set(3,30));
         integers.setElementAt(20,2);
-        System.out.println(integers);
+        System.out.println("->"+integers);
         integers.remove(0);
         System.out.println(integers);
 //        integers.removeAllElements();
 //        System.out.println(integers);
         integers.clear();
-        System.out.println(integers);
+        integers.add(3);
+        for (int i = 0; i < 3333; i++) {
+            integers.add(1);
+        }
+        System.out.println(integers.size());
+        System.out.println(integers.capacity());
     }
 }
+//class VectorDome extends Vector {
+//    public static void main(String[] args) {
+//        VectorDome vectorDome = new VectorDome();
+//        int i = vectorDome.elementData.length;
+//        System.out.println(Arrays.toString(vectorDome.elementData));
+//    }
+//}

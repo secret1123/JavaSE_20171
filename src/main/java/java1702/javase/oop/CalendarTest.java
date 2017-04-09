@@ -17,9 +17,9 @@ public class CalendarTest {
         int year = 2017;
         int month = 12;
         System.out.println(year + "年" + month + "月的日历如下所示：");
-        GregorianCalendar gregorianCalendar = new GregorianCalendar(year,month-1,1);
-//        Calendar calendar = Calendar.getInstance();
-//        calendar.set(year,month-1,1);
+//        GregorianCalendar gregorianCalendar = new GregorianCalendar(year,month-1,1);
+        Calendar calendar = Calendar.getInstance();
+        calendar.set(year,month-1,1);
         int totalDays = Calendar.DAY_OF_MONTH;
         int startDay = Calendar.DAY_OF_WEEK - 1;
         for (i = 0; i < WEEK.length; i++) {

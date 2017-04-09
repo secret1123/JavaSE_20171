@@ -6,7 +6,7 @@ package java1702.javase.collection;
  * JavaSE_20171
  */
 public class ArrayTest {
-    public static void main(String[] args) {
+    public static void main(String[] args) { //args arguments 参数
         String[] strings = new String[10];
         System.out.println(strings[0]);
         strings[0] = "test...";
@@ -15,7 +15,7 @@ public class ArrayTest {
         boolean[] booleans = new boolean[100];
         System.out.println(booleans[99]);
 
-        int[] ints = {1,2,3,4,5,6,67,888};
+        int[] ints =  {1,2,3,4,5,6,67,888};
         System.out.println(ints[6]);
 
         double[] doubles= new double[10];
@@ -37,8 +37,7 @@ public class ArrayTest {
 
         //itar + tab   iterate 迭代 array 数组  对数组进行迭代循环赋值
         for (int i = 0; i < months.length; i++) {
-            String month = months[i];
-            System.out.println(month);
+            System.out.println(months[i]);
         }
 
         System.out.println("---------------");
