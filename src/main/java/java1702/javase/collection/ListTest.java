@@ -1,5 +1,6 @@
 package java1702.javase.collection;
 
+import java.lang.reflect.Field;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -9,20 +10,22 @@ import java.util.List;
  * 2017/3/31 11:43.
  * JavaSE_20171
  */
-public class ListTest extends ArrayList{
-    public static void main(String[] args) {
+public class ListTest<E> extends ArrayList<E>{
+    public static void main(String[] args) throws NoSuchFieldException, IllegalAccessException {
+
+        ArrayList<String> arrayList1 = new ArrayList<>();
+        arrayList1.add("one");
+        arrayList1.add("two");
+        arrayList1.add("three");
+        System.out.println(arrayList1);
+
         List<String> arrayList = new ArrayList<>();
         arrayList.add("applet");
         arrayList.add("main");
         arrayList.add("args");
         arrayList.add("args");
-        arrayList.add("args");
-        arrayList.add("args");
-        arrayList.add("args");
-        arrayList.add("args");
-        arrayList.add("args");
         arrayList.add(2,"call");
-        System.out.println(arrayList.addAll(3,arrayList));
+        System.out.println(arrayList.addAll(3,arrayList1));
         System.out.println(arrayList);
         System.out.println("1： "+arrayList.size());
         System.out.println("2： "+arrayList.get(2));
@@ -46,19 +49,44 @@ public class ListTest extends ArrayList{
         System.out.println("13： "+arrayList.size());
 //        arrayList.trimToSize();
         System.out.println("14： "+arrayList.size());
-//        System.out.println(Arrays.toString(arrayList.toArray()));
-//        arrayList.ensureCapacity(15);
+        System.out.println(Arrays.toString(arrayList.toArray()));
+        arrayList1.ensureCapacity(10);
 
         List<String> strings1 = arrayList.subList(2,4);
         System.out.println("15： "+strings1);
 
-        ListTest listTest = new ListTest();
-        for (int i = 0; i < 10; i++) {
-            listTest.add(""+i);
-        }
-        listTest.removeRange(5,10);
+        ListTest<Integer> listTest = new ListTest<>();
+        listTest.add(1);
+        listTest.add(2);
+        listTest.add(3);
+        listTest.add(3);
+        listTest.add(3);
+        listTest.add(3);
+        listTest.add(3);
+        listTest.add(3);
+        listTest.add(3);
+        listTest.add(3);
+        listTest.add(3);
+        listTest.add(3);
+        listTest.add(3);
+        listTest.add(3);
+        listTest.add(3);
+        listTest.add(3);
+        listTest.add(3);
+        listTest.add(3);
+
+
+//        listTest.removeRange(5,10);
         for (Object o : listTest) {
             System.out.println("16： "+o);
         }
+
+        Field field = ArrayList.class.getDeclaredField("elementData");
+        field.setAccessible(true);
+        System.out.println("capacity1:"+((Object[])field.get(listTest)).length);
+
+        listTest.trimToSize();
+        System.out.println("capacity2:"+((Object[])field.get(listTest)).length);
+        System.out.println(listTest.size());
     }
 }
