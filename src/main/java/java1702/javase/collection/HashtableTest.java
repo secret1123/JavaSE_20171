@@ -19,9 +19,9 @@ public class HashtableTest {
         hashtable.put(3,"test");
 
         System.out.println("size:"+hashtable.size());
-        System.out.println(hashtable.get(3));
+        System.out.println(hashtable.get(4));//null
         System.out.println(hashtable.contains("hi"));
-//        hashtable.remove(1);
+        hashtable.remove(3);
         System.out.println(hashtable.size());
 
         for (Integer integer : hashtable.keySet()) {
