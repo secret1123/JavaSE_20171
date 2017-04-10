@@ -38,7 +38,7 @@ public class ListTest<E> extends ArrayList<E>{
 //            System.out.println("8： "+string);
 //        }
         System.out.println("9： "+arrayList.remove(4));
-        Object[] objects = arrayList.toArray();
+//        Object[] objects = arrayList.toArray();
         arrayList.add("main");
         System.out.println("10： "+arrayList.size());
         System.out.println("11： "+arrayList);
@@ -47,7 +47,6 @@ public class ListTest<E> extends ArrayList<E>{
         System.out.println("->"+strings.length);
         System.out.println("12： "+arrayList);
         System.out.println("13： "+arrayList.size());
-//        arrayList.trimToSize();
         System.out.println("14： "+arrayList.size());
         System.out.println(Arrays.toString(arrayList.toArray()));
         arrayList1.ensureCapacity(10);
@@ -58,17 +57,6 @@ public class ListTest<E> extends ArrayList<E>{
         ListTest<Integer> listTest = new ListTest<>();
         listTest.add(1);
         listTest.add(2);
-        listTest.add(3);
-        listTest.add(3);
-        listTest.add(3);
-        listTest.add(3);
-        listTest.add(3);
-        listTest.add(3);
-        listTest.add(3);
-        listTest.add(3);
-        listTest.add(3);
-        listTest.add(3);
-        listTest.add(3);
         listTest.add(3);
         listTest.add(3);
         listTest.add(3);
