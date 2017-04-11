@@ -51,7 +51,7 @@ public class Student {
             System.out.println(student.getAge());
             System.out.println(student.getGender());
         }
-//
+
 //        for (Iterator<Student> it = students.iterator(); it.hasNext(); ) {
 //            Object o = it.next();
 //            System.out.println(o);
