@@ -62,7 +62,15 @@ public class ListTest<E> extends ArrayList<E>{
         listTest.add(3);
         listTest.add(3);
         listTest.add(3);
-
+        listTest.add(3);
+        listTest.add(3);
+        listTest.add(3);
+        listTest.add(3);
+        listTest.add(3);
+        listTest.add(3);
+        listTest.add(3);
+        listTest.add(3);
+        listTest.add(3);
 
 //        listTest.removeRange(5,10);
         for (Object o : listTest) {

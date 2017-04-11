@@ -23,7 +23,7 @@ public class MyLinkedList {
         myLinkedList.add("d");
         System.out.println(myLinkedList.First());
         System.out.println(myLinkedList.Last());
-//        System.out.println(myLinkedList.get());
+        System.out.println(myLinkedList.get(2));
         System.out.println(myLinkedList);
     }
 
