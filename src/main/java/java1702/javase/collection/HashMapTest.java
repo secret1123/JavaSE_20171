@@ -21,7 +21,7 @@ public class HashMapTest {
         map1.put(5,"five");
 
         map.putAll(map1);
-        System.out.println(map);
+        System.out.println(map1);
 
         System.out.println(map.get(4));
         System.out.println(map.entrySet());
