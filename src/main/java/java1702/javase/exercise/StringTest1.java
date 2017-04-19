@@ -1,7 +1,5 @@
 package java1702.javase.exercise;
 
-import java1702.javase.collection.StringTest;
-
 /**
  * Created by AnLu on
  * 2017/4/16 19:11.
