@@ -15,10 +15,12 @@ public class StringTest3 {
 
         String s = "123,45,25,85";
         String [] s1 = s.split(",") ;
-
-        Arrays.sort(s1);
-        for (String string : s1) {
-            System.out.print(string+" ");
+        System.out.println(Arrays.toString(s1));
+        int[] num = new int[s1.length];
+        for (int i = 0; i < num.length; i++) {
+            num[i]= Integer.parseInt(s1[i]);
         }
+        Arrays.sort(num);
+        System.out.println(Arrays.toString(num));
     }
 }
