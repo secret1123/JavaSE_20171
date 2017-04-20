@@ -1,4 +1,4 @@
-package io;
+package java1702.javase.io;
 
 import java.io.*;
 
@@ -10,8 +10,9 @@ import java.io.*;
 public class InputStreamTest {
 
     public static void main(String[] args) {
+        FileInputStream inputStreamTest = null;
         try {
-            FileInputStream inputStreamTest = new FileInputStream("test");
+            inputStreamTest = new FileInputStream("test");
 
             int i;
             while ((i = inputStreamTest.read()) != -1) {
@@ -19,6 +20,14 @@ public class InputStreamTest {
             }
         } catch (IOException e) {
             e.printStackTrace();
+        }finally {
+            if (inputStreamTest!=null) {
+                try {
+                    inputStreamTest.close();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
         }
     }
 }

@@ -1,4 +1,4 @@
-package exception;
+package java1702.javase.exception;
 
 /**
  * Created by AnLu on

@@ -1,4 +1,4 @@
-package io;
+package java1702.javase.io;
 
 import java.io.FileReader;
 import java.io.IOException;
@@ -12,15 +12,23 @@ import java.io.Reader;
 public class ReaderTest {
 
     public static void main(String[] args) {
-
+        Reader reader = null;
         try {
-            Reader reader = new FileReader("test");
+            reader = new FileReader("test");
             int i;
-            while ((i = reader.read())!= -1){
+            while ((i = reader.read()) != -1) {
                 System.out.println(i);
             }
         } catch (IOException e) {
             e.printStackTrace();
+        } finally {
+            if (reader != null) {
+                try {
+                    reader.close();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
         }
     }
 }

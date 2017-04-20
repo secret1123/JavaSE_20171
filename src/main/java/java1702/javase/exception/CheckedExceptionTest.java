@@ -1,4 +1,4 @@
-package exception;
+package java1702.javase.exception;
 
 import java.io.FileNotFoundException;
 import java.io.RandomAccessFile;
