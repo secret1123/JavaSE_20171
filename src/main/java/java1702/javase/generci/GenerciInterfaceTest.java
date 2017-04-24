@@ -1,5 +1,7 @@
 package java1702.javase.generci;
 
+import java.util.Stack;
+
 /**
  * Created by AnLu on
  * 2017/4/13 11:39.
@@ -11,4 +13,6 @@ public interface GenerciInterfaceTest<T> {
     void m2(T t1,T t2);
 
     T m3();
+
+
 }
