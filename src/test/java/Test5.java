@@ -6,37 +6,30 @@ import java.io.RandomAccessFile;
  * 2017/4/22 10:02.
  * JavaSE_20171
  */
-public class Test5 {
+public class Test5{
+
+    private static int fibonacci(int n){
+        if (n==1||n==2) {
+            return 1;
+        }
+        return fibonacci(n-1)+fibonacci(n-2);
+    }
+
     public static void main(String[] args) {
-        final int M = 20;
-        int[] fib = new int[M];
-        int[] fib2 = new int[M];
-        long fp;
-        fib[0] = 1;
-        fib[1] = 1;
-        int i;
-        for (i = 2; i < M; i++)
-            fib[i] = fib[i - 1] + fib[i - 2];
-        try {
-            RandomAccessFile raf = new RandomAccessFile("fout.txt", "rw");
-            System.out.println("fout.txt中的内容为： ");
-            for (i = 0; i < M; i++) {
-                raf.writeInt(fib[i]);
-                System.out.println(fib[i] + "\t");
+        try
+                (RandomAccessFile raf = new RandomAccessFile("raf.txt","rw")){
+            for (int i = 0; i < 20; i++) {
+                raf.writeInt(fibonacci(i+1));
             }
-            for (i = 1; i < M; i += 2) {
-                fp = i * 4;
-                raf.seek(fp);
-                fib2[i / 2] = raf.readInt();
+            raf.seek(0);
+            for (int i = 0; i < 3; i++) {
+                raf.readInt();
+                try (RandomAccessFile file = new RandomAccessFile("output.txt","rw")){
+                    int r =raf.readInt();
+                    System.out.println(r);
+                    file.writeInt(r);
+                }
             }
-            raf.close();
-            raf=new RandomAccessFile("fin.txt","rw");
-            System.out.println("fin.txt中的内容为： ");
-            for (i=0;i<M/2;i++) {
-                System.out.println(fib2[i] + "\t");
-                raf.writeInt(fib2[i]);
-            }
-            raf.close();
         } catch (IOException e) {
             e.printStackTrace();
         }
