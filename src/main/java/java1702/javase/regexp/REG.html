@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        var patt = /[^0-9]/g;
+        console.log('asDF123'.match(patt));
+        patt.compile('(red|blue|green)','ig');
+        console.log('redGreenbBlue'.match(patt));
+        patt.compile('[\u4e00-\u9fbb]','g');
+        console.log('w3school匹配所有汉字'.match(patt))
+    </script>
+</head>
+<body>
+
+</body>
+</html>
