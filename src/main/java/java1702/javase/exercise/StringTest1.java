@@ -33,7 +33,7 @@ public class StringTest1 {
             len = len1;
         }
         for (int i = 0; i < len; i++) {
-            if (arr1[len1 - i - 1].equals(arr2[len2 - i - 1])) {
+            if (!arr1[len1 - i - 1].equals(arr2[len2 - i - 1])) {
                 count++;
             }
         }
