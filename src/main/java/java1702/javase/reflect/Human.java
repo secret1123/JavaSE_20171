@@ -2,6 +2,7 @@ package java1702.javase.reflect;
 
 import java.lang.reflect.Constructor;
 import java.lang.reflect.Field;
+import java.lang.reflect.Parameter;
 
 /**
  * Created by AnLu on
@@ -98,19 +99,44 @@ public class Human extends Animals{
 }
 
 class HumanTest{
-    public static void main(String[] args) {
-        Human human = new Human();
-        Class clazz = human.getClass();
-        Field[] fields = clazz.getFields();
-        System.out.println("------getFields()-------");
-        for (Field field : fields) {
-            System.out.println(field.getName());
+    public static void main(String[] args) throws NoSuchMethodException {
+//        Human human = new Human();
+//        Class clazz = human.getClass();
+//        Field[] fields = clazz.getFields();
+//        System.out.println("------getFields()-------");
+//        for (Field field : fields) {
+//            System.out.println(field.getName());
+//        }
+//
+//        Field[] declaredFilds = clazz.getDeclaredFields();
+//        System.out.println("------getDeclaredFields()------");
+//        for (Field declaredFild : declaredFilds) {
+//            System.out.println(declaredFild.getName());
+//        }
+        Class clazz = Human.class;
+
+        Constructor[] constructors = clazz.getConstructors();
+        System.out.println("----getConstructors()----");
+        for (Constructor constructor : constructors) {
+            System.out.println(constructor.getName());
+            for (Parameter parameter : constructor.getParameters()) {
+                System.out.println("\t"+parameter);
+            }
         }
 
-        Field[] declaredFilds = clazz.getDeclaredFields();
-        System.out.println("------getDeclaredFields()------");
-        for (Field declaredFild : declaredFilds) {
-            System.out.println(declaredFild.getName());
+        Constructor[] declaredConstructors = clazz.getDeclaredConstructors();
+        System.out.println("----getDeclaredConstructors()----");
+        for (Constructor constructor : declaredConstructors) {
+            System.out.println(constructor.getName());
+            for (Parameter parameter : constructor.getParameters()) {
+                System.out.println("\t"+parameter.getName());
+            }
+        }
+
+        Constructor constructor = clazz.getDeclaredConstructor(int.class,double.class,String.class,boolean.class);
+        System.out.println(constructor.getName());
+        for (Parameter parameter : constructor.getParameters()) {
+            System.out.println(parameter);
         }
     }
 }
