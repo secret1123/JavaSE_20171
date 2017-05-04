@@ -2,6 +2,7 @@ package java1702.javase.reflect;
 
 import java.lang.reflect.Constructor;
 import java.lang.reflect.Field;
+import java.lang.reflect.Modifier;
 import java.lang.reflect.Parameter;
 
 /**
@@ -137,6 +138,13 @@ class HumanTest{
         System.out.println(constructor.getName());
         for (Parameter parameter : constructor.getParameters()) {
             System.out.println(parameter);
+        }
+
+        try {
+            Field field = clazz.getDeclaredField("married");
+            System.out.println(Modifier.toString(field.getModifiers()));
+        }catch (NoSuchFieldException e){
+            e.printStackTrace();
         }
     }
 }
