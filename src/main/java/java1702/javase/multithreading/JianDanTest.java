@@ -15,7 +15,7 @@ public class JianDanTest implements Runnable {
     private static final String PAGE_URL = "http://jandan.net/tag/%E5%A4%A9%E6%96%87/page/";
     private int page;
 
-    public JianDanTest(int page) {
+    private JianDanTest(int page) {
         this.page = page;
     }
 
