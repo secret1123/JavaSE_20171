@@ -20,7 +20,7 @@ public class UrlTest {
             URL url = new URL(IMAGE_URL);
             try (
                     InputStream inputStream = url.openStream();
-                    OutputStream outputStream = new FileOutputStream("test.jpg");
+                    OutputStream outputStream = new FileOutputStream("test.jpg")
             ) {
                 System.out.println(inputStream.available());
                 int i;
