@@ -29,12 +29,6 @@ public class MT5 implements Runnable{
         System.out.println("test.");
     }
 
-
-
-
-
-
-
     @Override
     public void run() {
         for (int i = 0; i < 3; i++) {
