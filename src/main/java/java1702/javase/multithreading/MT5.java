@@ -10,7 +10,7 @@ public class MT5 implements Runnable{
     public static void main(String[] args) {
 
         Thread thread1 = new Thread(new MT5(),"thread 1");
-        thread1.setName("thread1");
+//        thread1.setName("thread1");
         Thread thread2 = new Thread(new MT5(),"thread 2");
 //        thread2.setName("thread2");
         Thread thread3 = new Thread(new MT5(),"thread 3");

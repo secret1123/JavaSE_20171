@@ -12,17 +12,17 @@ public class Account {
         this.money = money;
     }
 
-    public void withdraw(int money) {
+    synchronized void withdraw(int money) {
         System.out.println(Thread.currentThread().getName());
         if (this.money - money < 0) {
             System.out.println("not enough.");
             return;
         }
-//        try {
-//            Thread.sleep(3000);
-//        } catch (InterruptedException e) {
-//            e.printStackTrace();
-//        }
+        try {
+            Thread.sleep(3000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
         this.money -= money;
         System.out.println("get the money.");
     }
