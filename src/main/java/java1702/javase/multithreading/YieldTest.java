@@ -8,8 +8,8 @@ package java1702.javase.multithreading;
 public class YieldTest implements Runnable {
 
     public static void main(String[] args) {
-        Thread thread1 = new Thread(new YieldTest(),"thread 1");
-        Thread thread2 = new Thread(new YieldTest(),"thread 2");
+        Thread thread1 = new Thread(new YieldTest(), "thread 1");
+        Thread thread2 = new Thread(new YieldTest(), "thread 2");
 
         thread1.start();
         thread2.start();
@@ -20,9 +20,10 @@ public class YieldTest implements Runnable {
     @Override
     public void run() {
         for (int i = 0; i < 100; i++) {
-            if (i%10==0){
+            if (i % 10 == 0) {
                 Thread.yield();
             }
+        System.out.println(i);
         }
     }
 }
