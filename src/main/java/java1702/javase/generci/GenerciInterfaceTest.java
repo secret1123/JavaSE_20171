@@ -1,7 +1,5 @@
 package java1702.javase.generci;
 
-import java.util.Stack;
-
 /**
  * Created by AnLu on
  * 2017/4/13 11:39.

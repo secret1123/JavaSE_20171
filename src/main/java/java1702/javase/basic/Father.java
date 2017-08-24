@@ -45,6 +45,5 @@ class  ExtendsTest {
         System.out.println();
         brother.coding();
 
-
     }
 }
